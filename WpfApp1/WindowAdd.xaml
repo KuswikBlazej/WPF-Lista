@@ -1,14 +1,29 @@
 ﻿<Window x:Class="WpfApp1.WindowAdd"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WpfApp1"
-        mc:Ignorable="d"
-        Title="WindowAdd" Height="300" Width="300">
+        Title="Dodaj notatkę"
+        Height="300"
+        Width="300"
+        WindowStartupLocation="CenterOwner">
+
     <StackPanel>
-        <Label Content="Dodaj Treść Notatki" FontSize="20"></Label>
-        <TextBox Margin="20" Height="178"></TextBox>
-        <Button Content="Dodaj Notatke" FontSize="20"></Button>
+
+        <Label Content="Dodaj Treść Notatki"
+               FontSize="20"
+               Margin="5"/>
+
+        <TextBox x:Name="NoteText"
+                 Margin="20"
+                 Height="150"
+                 FontSize="16"
+                 TextWrapping="Wrap"
+                 AcceptsReturn="True"
+                 VerticalScrollBarVisibility="Auto"/>
+
+        <Button Content="Dodaj Notatkę"
+                FontSize="20"
+                Margin="5"
+                Click="AddNote_Click"/>
+
     </StackPanel>
 </Window>
